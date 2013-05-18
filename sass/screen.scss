@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import "compass/reset";
+@import "compass/css3";
+
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+main{
+	width: 80%;
+	min-height: 600px;
+	margin: 50px auto;
+	text-align: center;
+}
+h1{
+	font-size: 50px;
+}
+h2{
+	font-size: 35px;
+}
+.btn, .inp{
+	@include transition(0.5s);
+}
+.btn{
+	min-width: 100px;
+	min-height: 40px;
+	padding: 10px;
+	font-size: $font_01;
+	color: $color_01;
+	background: $color_00;
+	border: solid 1px $color_00;
+	@include border-radius(4px);
+}
+.btn-mid{
+	min-width: 110px;
+	min-height: 50px;
+}
+.btn-large{
+	min-width: 120px;
+	min-height: 60px;
+}
+.btn:hover{
+	border-color: $color_02; 
+	background: $color_02;
+}
+
+// Inputs
+.inp{
+	min-width: 220px;
+	height: 30px;
+	padding: 2px 5px 2px 5px;
+	font-size: $font_01;
+	outline: none;
+	border: solid 2px $color_00;
+}
+.inp[type="number"]{
+	min-width: 50px;
+}
+.inp:focus{
+	border-color: $color_02;
+}
